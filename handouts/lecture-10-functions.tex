@@ -1,0 +1,59 @@
+\documentclass{tufte-handout}
+
+\usepackage{xcolor}
+
+% set image attributes:
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% set hyperlink attributes
+\hypersetup{colorlinks}
+
+% subsection indenetation
+\newenvironment{subs}
+  {\adjustwidth{1em}{0pt}}
+  {\endadjustwidth}
+
+% ============================================================
+
+% define the title
+\title{SOC 4650/5650: Lecture 10 Functions}
+\author{Christopher Prener, Ph.D.}
+\date{Spring 2018}
+% ============================================================
+\begin{document}
+% ============================================================
+\maketitle % generates the title
+% ============================================================
+
+\vspace{5mm}
+\section{Packages}
+\begin{itemize}
+\item \texttt{leaflet}
+\item \texttt{sf}
+\end{itemize}
+
+\vspace{5mm}
+\section{Change Coordinate System}
+\texttt{sf::}{\color{red}\texttt{st\_transform}}\texttt{(\textit{data}, crs = \textit{epsg})}
+
+\vspace{5mm}
+\section{Create Geometry Column}
+\texttt{sf::}{\color{red}\texttt{st\_as\_sf}}\texttt{(\textit{data}, coords = c("\textit{x}", "\textit{y}"), crs = \textit{epsg})}
+
+\vspace{5mm}
+\section{Previewing Projected Data (Review from Lecture 01)}
+\begin{subs}
+\subsection{Create Map}
+\texttt{leaflet::}{\color{red}\texttt{leaflet}}\texttt{()}
+
+\vspace{3mm}
+\subsection{Add Open Street Map Base}
+\texttt{leaflet::}{\color{red}\texttt{addTiles}}\texttt{()}
+
+\vspace{3mm}
+\subsection{Add Markers from Data}
+\texttt{leaflet::}{\color{red}\texttt{addMarkers}}\texttt{(data = \textit{data})}
+\end{subs}
+% ============================================================
+\end{document}
