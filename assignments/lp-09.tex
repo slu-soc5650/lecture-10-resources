@@ -1,0 +1,50 @@
+\documentclass{tufte-handout}
+
+\usepackage{xcolor}
+
+% set image attributes:
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% set hyperlink attributes
+\hypersetup{colorlinks}
+
+\usepackage{fancyvrb,xcolor}
+
+\definecolor{cverbbg}{gray}{0.93}
+
+\newenvironment{codeBlock}
+ {\SaveVerbatim{cverb}}
+ {\endSaveVerbatim
+  \flushleft\fboxrule=0pt\fboxsep=.5em
+  \colorbox{cverbbg}{%
+    \makebox[\dimexpr\linewidth-2\fboxsep][l]{\BUseVerbatim{cverb}}%
+  }
+  \endflushleft
+}
+
+% ========================================================
+
+% define the title
+\title{SOC 4650/5650: Lecture Prep 09 - World Map \\Projections}
+\author{Christopher Prener, Ph.D.}
+\date{March 26\textsuperscript{th}, 2018}
+% =======================================================
+\begin{document}
+% =======================================================
+\maketitle % generates the title
+% =======================================================
+
+\section{Directions}
+Complete all of the steps in Chapter 4 of Gorr and Kurland (2016) for Tutorial 5-2 on pages 175 to 177. A replication video will be posted on YouTube. Your map file (\texttt{.mxd}) should be uploaded to your GitHub assignment repository in the \texttt{LecturePreps/LP-09} directory by 5:00pm on Monday, March 26\textsuperscript{th}, 2018.
+
+\vspace{5mm}
+\section{Additions and Changes}
+\begin{enumerate}
+\item On page 175, under question 1, you can find the referenced file in the course data release at \texttt{DataLibrary/GISTutorial/Maps/}.
+\item On page 176, at the end of the section titled ``Change the map's projection to Mercator'', export a map image of the Mercator projection as a \texttt{.pdf} file at 300 dpi.
+\item Complete both maps in the ``Your Turn'' box at the end of the section ``Change the map's projection to Mercator'', exporting each map image as a \texttt{.pdf} file at 300 dpi.
+\end{enumerate}
+
+% =======================================================
+\end{document}
